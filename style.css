@@ -1,5 +1,5 @@
 /* =========================================
-   LUMOS / WEBFLOW VARIABLES
+   VARIABLES
    ========================================= */
 :root {
   /* Colors */
@@ -754,5 +754,6 @@ button {
     align-items: start;
   }
 }
+
 
 
