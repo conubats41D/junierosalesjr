@@ -710,10 +710,10 @@ button {
 }
 @media (max-width: 768px) {
   :root {
-    --text--size-h1: 2.5rem;
+    --text--size-h1: 2.3rem;
     --text--size-h2: 1.5rem;
     --text--size-h3: 1.2rem;
-    --text--size-sub: 2rem;
+    --text--size-sub: 1.7rem;
     --space--section-large: 4rem;
     --space--page-padding: 1rem;
   }
@@ -788,6 +788,9 @@ button {
   }
 }
 @media (max-width: 480px) {
+  .header_content h1 span {
+    font-size: var(--text--size-sub);
+  }
   #typewriter-text{
     display: none;
   }
