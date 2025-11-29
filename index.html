@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junie Rosales Jr. | Developer Portfolio</title>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- SWIPER.JS Dependencies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="page-wrapper">
+        <!-- Navbar -->
+        <div class="navbar_component">
+            <div class="padding-global">
+                <div class="container-large">
+                    <div class="navbar_container">
+                        <a href="#" class="brand-link" style="display:flex; align-items:center; gap:0.5rem; color:white; font-weight:700;">
+                            <i data-lucide="terminal" width="16"></i>
+                            JR_PORTFOLIO
+                        </a>
+                        <nav class="navbar_menu">`
+                             <ul class="navbar_link-list">
+                                <li><a href="#about" class="navbar_link">About</a></li>`
+                                <li><a href="#experience" class="navbar_link">Experience</a></li>
+                                <li><a href="#hobbies" class="navbar_link">Hobbies</a></li>
+                                <li><a href="#work" class="navbar_link">Work</a></li>
+                                <li><a href="#contact" class="navbar_link">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <button class="navbar_burger" aria-label="Open menu">
+                            <i data-lucide="menu"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="main-wrapper" id="main-content">
+            <!-- Header Section -->
+            <section class="section_header retro-grid-bg reveal-on-scroll">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="padding-section-large" style="padding-top: 8rem; min-height: 90vh; display: flex; align-items: center;">
+                            
+                            <div class="layout_grid-2col">
+                                <div class="header_content">
+                                    <div class="header_status-tag">
+                                        <p class="text-style-overline text-color-secondary">Status: <span class="text-color-white">Available</span> <span class="cursor-blink">_</span></p>
+                                    </div>
+                                    
+                                    <h1 class="heading-style-h1" style="margin-bottom: 2rem;">
+                                        Junie Rosales Jr.<br>
+                                        <span class="text-color-secondary" id="typewriter-text"></span> <span class="text-color-secondary">Developer.</span><span class="text-color-secondary cursor-blink">|</span>
+                                    </h1>
+
+                                    <p class="header_info-block">
+                                        // Crafting functional and aesthetic digital systems.<br>
+                                        Specializing in low-code platforms and performance optimization.
+                                    </p>
+
+                                    <div class="button-group">
+                                        <a href="https://www.linkedin.com/in/junie-rosales-jr/" target="_blank" class="button is-primary">
+                                            LinkedIn <i data-lucide="arrow-up-right" width="16"></i>
+                                        </a>
+                                        <a href="assets/docs/Junie_Rosales_Jr.pdf" target="_black" class="button is-secondary">
+                                            Download CV <i data-lucide="download" width="16"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="header_image-wrapper">
+                                    <div class="frame-wrapper" style="width: 100%; max-width: 25rem;">
+                                        <div class="corner-marker is-tl"></div>
+                                        <div class="corner-marker is-tr"></div>
+                                        <div class="corner-marker is-bl"></div>
+                                        <div class="corner-marker is-br"></div>
+                                        
+                                        <div class="frame_content">
+                                            <img src="assets/images/junie-img1.webp" alt="Junie Rosales" class="frame_image">
+                                            
+                                            <div class="frame_footer">
+                                                <p class="text-style-overline">Identify:</p>
+                                                <p class="text-style-small" style="font-weight: 700;">User_Admin</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Marquee Section -->
+            <div class="section_marquee reveal-on-scroll">
+                <div class="padding-global">
+                    <div style="padding: 1rem 0;">
+                        <div class="marquee-track">
+                            <div id="marquee-content-1" style="display: flex;"></div>
+                            <div id="marquee-content-2" style="display: flex;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <section id="about" class="section_about reveal-on-scroll">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="padding-section-medium">
+                            <div class="about_grid">
+                                
+                                <div class="about_intro">
+                                    <p class="text-style-overline" style="margin-bottom: 1rem;">[01] About Me</p>
+                                    <p class="heading-style-h3" style="font-weight: 400; margin-bottom: 1.5rem;">
+                                        I transform strategic goals into functional, efficient, and scalable web experiences.</span>
+                                    </p>
+                                    <p class="text-color-secondary">
+                                        My career began with core development in WordPress/PHP and expanded into modern low-code systems like Webflow.
+                                    </p>
+                                </div>
+
+                                <div class="about_stats-grid">
+                                    <div class="stat_row-1">
+                                        <h2 class="heading-style-h1">7+</h2>
+                                        <p class="text-style-overline">Years Experience</p>
+                                    </div>
+                                    <div class="stat_row-2">
+                                        <div class="stat_col-1">
+                                            <h3 class="heading-style-h2">BS</h3>
+                                            <p class="text-style-overline">Industrial Tech</p>
+                                        </div>
+                                        <div class="stat_col-2">
+                                            <h3 class="heading-style-h2">100%</h3>
+                                            <p class="text-style-overline">Satisfaction</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section_experience reveal-on-scroll">
+                <div class="padding-global">
+                    <div class="container-large" style="max-width: 60rem;">
+                        <div class="padding-section-large">
+                            
+                            <div class="experience_header">
+                                <h2 class="heading-style-h2">Experience_Log</h2>
+                                <span class="text-style-overline">[History]</span>
+                            </div>
+
+                            <!-- Accordion List -->
+                            <div class="job_list">
+                                <div class="accordion-item job_item is-open">
+                                    <div class="accordion-header job_header" tabindex="0">
+                                        <div class="job_header-inner">
+                                            <h3 class="heading-style-h3">Webflow Developer/Support Specialist</h3>
+                                            <span class="text-style-overline">Apr 2024 - Nov 2025</span>
+                                        </div>
+                                        <i data-lucide="chevron-down" class="accordion-icon"></i>
+                                    </div>
+                                    <p class="text-style-overline job_location">fare•well / Remote</p>
+                                    <div class="accordion-content">
+                                        <ul class="job_description-list">
+                                            <li>Build and maintain Webflow sites using the Client-First framework and component libraries (Relume, Lumos).</li>
+                                            <li>Optimize websites for SEO, accessibility, performance,and responsiveness using tools such as Silktide, Ahrefs,and other industry-standard auditing platforms.</li>
+                                            <li>Convert WordPress sites into fully functional Webflowbuilds.</li>
+                                            <li>Integrate analytics, tracking, and CRM systems (GTM,GA4, GSC, HubSpot, etc.).</li>
+                                            <li>Create custom automation workflows using Zapier andMake.</li>
+                                            <li>Improve and optimize existing Webflow sites for SEO,CRO, and overall usability.</li>
+                                            <li>Develop dynamic content structures using Webflow CMSand conditional visibility logic.</li>
+                                            <li>Set up and manage Webflow E-Commerce for simpleonline stores.</li>
+                                            <li>Build and refine reusable components to supportscalable, multi-client development.</li>
+                                            <li>Troubleshoot and resolve Webflow issues to ensuresmooth site performance.</li>
+                                            <li>Collaborate with the founder and internal team</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item job_item">
+                                    <div class="accordion-header job_header">
+                                        <div class="job_header-inner">
+                                            <h3 class="heading-style-h3">React Native - UI Developer</h3>
+                                            <span class="text-style-overline">Jan 2023 - Mar 2024</span>
+                                        </div>
+                                        <i data-lucide="chevron-down" class="accordion-icon"></i>
+                                    </div>
+                                    <p class="text-style-overline job_location">DNA Micro Software Inc. / on-site</p>
+                                    <div class="accordion-content">
+                                        <ul class="job_description-list">
+                                            <li>Work with native modules when required</li>
+                                            <li>Write tests to ensure top performance</li>
+                                            <li>Fix bugs in the application</li>
+                                            <li>Boost front-end or client-side performance byeliminating performance bottlenecks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item job_item">
+                                    <div class="accordion-header job_header">
+                                        <div class="job_header-inner">
+                                            <h3 class="heading-style-h3">Wordpress Developer</h3>
+                                            <span class="text-style-overline">May 2017 - Dec 2022</span>
+                                         </div>  
+                                         <i data-lucide="chevron-down" class="accordion-icon"></i>
+                                    </div>
+                                    <p class="text-style-overline job_location">Delonix Marketing Corporation / on-site</p>
+                                    <div class="accordion-content">
+                                        <ul class="job_description-list">
+                                            <li>Creating, managing, and developing WordPress websites using ACF, Elementor, and Divi Builder.</li>
+                                            <li>Managing, maintaining, and upgrading websites, including backups.</li>
+                                            <li>Integrating client's HubSpot or Mailchimp for mail campaigns and tracking.</li>
+                                            <li>Optimizing websites for speed and scalability.</li>
+                                            <li>Implementing Woocommerce and payment gateways.</li>
+                                            <li>Handling PSD to WordPress conversion. Implementing Basic SEO practices.</li>
+                                            <li>Configuring DNS settings. Performing other assigned web development tasks.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item job_item">
+                                    <div class="accordion-header job_header">
+                                        <div class="job_header-inner">
+                                            <h3 class="heading-style-h3">Wordpress Developer</h3>
+                                            <span class="text-style-overline">Nov 2020 - May 2021</span>
+                                        </div>
+                                        <i data-lucide="chevron-down" class="accordion-icon"></i>
+                                    </div>
+                                    <p class="text-style-overline job_location" style="margin-bottom: 1rem;">Freelance / remote</p>
+                                    <div class="accordion-content">
+                                        <ul class="job_description-list">
+                                            <li>Created, managed, and developed WordPress Websites using ACF, Elementor and Divi Builder</li>
+                                            <li>Converted the website pages to be responsive on different devices</li>
+                                            <li>Implemented Woocommerce and payment gateways</li>
+                                            <li>Performing other assigned web development tasks.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hobbies Section (Bento Grid) -->
+            <section id="hobbies" class="section_hobbies retro-grid-bg reveal-on-scroll" style="border-top: 1px solid var(--swatch--border);">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="padding-section-large">
+                            
+                            <div style="margin-bottom: 3rem;">
+                                <h2 class="heading-style-h2">Offline_Activities</h2>
+                                <p class="text-style-overline">[Personal_Logs]</p>
+                            </div>
+
+                            <div class="bento_gallery-wrapper">
+                                <!-- Bento Item 1: Hiking -->
+                                <div class="bento_item">
+                                    <div class="bento_header">
+                                        <span class="text-style-overline">IMG_001_HIKING.JPG</span>
+                                        <div class="bento_dot"></div>
+                                    </div>
+                                    <div class="bento_image-grid">
+                                        <div class="bento_image-container bento_main-image">
+                                            <img src="assets\images\trail-img-4.webp" alt="A man standing on top of a lush green hillside.">
+                                        </div>
+                                        <div class="bento_image-container bento_small-image-1">
+                                            <img src="assets\images\trail-img-1.webp" alt="A man standing on top of wearing pink shirt">
+                                        </div>
+                                        <div class="bento_image-container bento_small-image-2">
+                                            <img src="assets\images\trail-img-3.webp" alt="A close up of a person wearing blue shoes.">
+                                        </div>
+                                    </div>
+                                    <div class="bento_footer">
+                                        <p style="font-weight: 700;">Summit Seeker</p>
+                                        <p class="text-style-small text-color-secondary">Exploring nature and high-altitude endurance.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Bento Item 2: Running -->
+                                <div class="bento_item">
+                                    <div class="bento_header">
+                                        <span class="text-style-overline">IMG_002_RUNNING.JPG</span>
+                                        <div class="bento_dot"></div>
+                                    </div>
+                                    <div class="bento_image-grid">
+                                        <div class="bento_image-container bento_main-image">
+                                            <img src="assets\images\road-img-1.webp" alt="A man running in a race at night.">
+                                        </div>
+                                        <div class="bento_image-container bento_small-image-1">
+                                            <img src="assets\images\road-img-2.webp" alt="A man running at night in the street.">
+                                        </div>
+                                        <div class="bento_image-container bento_small-image-2">
+                                            <img src="assets\images\road-img-3.webp" alt="A person sitting next to a black water bottle.">
+                                        </div>
+                                    </div>
+                                    <div class="bento_footer">
+                                        <p style="font-weight: 700;">Endurance Training</p>
+                                        <p class="text-style-small text-color-secondary">Focusing on long-distance running and fitness tracking.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Work Section (Swiper.js Slider) -->
+            <section id="work" class="section_work reveal-on-scroll" style="border-top: 1px solid var(--swatch--border);">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="padding-section-large">
+                            
+                            <div class="work_header">
+                                <div>
+                                    <h2 class="heading-style-h2">Selected_Works</h2>
+                                    <p class="text-style-overline">Swipe_To_Explore >></p>
+                                </div>
+                                <div class="button-group">
+                                    <!-- Swiper Navigation Buttons -->
+                                    <button class="button-icon swiper-button-prev-custom">
+                                        <i data-lucide="chevron-left" width="16"></i>
+                                    </button>
+                                    <button class="button-icon swiper-button-next-custom">
+                                        <i data-lucide="chevron-right" width="16"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Swiper Container -->
+                            <div class="swiper" id="work-slider">
+                                <div class="swiper-wrapper">
+                                    <!-- Projects injected here as swiper-slide -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="contact" class="section_footer reveal-on-scroll" style="background: var(--swatch--black); border-top: 1px solid var(--swatch--border);">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="padding-section-large footer_content">
+                            
+                            <h2 class="heading-style-h2" style="margin-bottom: 2rem;">Initialize_Collaboration?</h2>
+                            <p class="text-style-overline" style="margin-bottom: 3rem;">[Status: Open_To_Work]</p>
+
+                            <a href="mailto:junie.rosales6045@gmail.com" class="button is-primary" style="margin-bottom: 4rem;">
+                                Send_Email_Transmission
+                            </a>
+
+                            <div class="footer_links">
+                                <a href="https://github.com/conubats41D" target="_blank" class="text-style-overline">Github</a>
+                                <a href="https://www.linkedin.com/in/junie-rosales-jr/" target="_blank" class="text-style-overline">LinkedIn</a>
+                                <span class="text-style-overline">© <span id="current-year"></span> Junie Rosales Jr.</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+</body>
+</html>
