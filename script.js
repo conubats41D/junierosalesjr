@@ -95,8 +95,9 @@ window.onload = function() {
 function initNavbarMenu() {
     const burger = document.querySelector('.navbar_burger');
     const menu = document.querySelector('.navbar_menu');
+    const links = document.querySelectorAll('.navbar_link'); // all menu links
 
-    burger.addEventListener('click', () => {
+    function toggleMenu() {
         const isOpen = menu.classList.contains('is-open');
 
         // Toggle burger animation
@@ -121,12 +122,25 @@ function initNavbarMenu() {
                 menu.removeEventListener('transitionend', resetHeight);
             });
         }
+    }
+
+    // Burger click
+    burger.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking any link
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (menu.classList.contains('is-open')) {
+                toggleMenu();
+            }
+        });
     });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     initNavbarMenu();
 });
+
 
 /* RENDER MARQUEE (Dynamic HTML Injection) */
 function renderMarquee() {
@@ -178,7 +192,6 @@ function renderProjects() {
         `;
     }).join('');
 
-    // Swiper doesn't need the final gap element
     wrapper.innerHTML = projectsHTML;
     lucide.createIcons();
 }
@@ -186,18 +199,13 @@ function renderProjects() {
 /* SWIPER INITIALIZATION */
 function initSwiper() {
     const workSwiper = new Swiper('#work-slider', {
-        // Use 'auto' to ensure slides are only as wide as their content (up to max-width defined in CSS)
         slidesPerView: 'auto', 
-        spaceBetween: 24, // Gap between slides (1.5rem)
+        spaceBetween: 24, 
         loop: false,
-
-        // Configure navigation using custom classes in the header
         navigation: {
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',
         },
-
-        // Responsive breakpoints
         breakpoints: {
             320: { 
                 slidesPerView: 1.2,
@@ -214,8 +222,6 @@ function initSwiper() {
         }
     });
     
-    // To ensure the button-icon element can function as swiper navigation
-    // we attach the click handlers explicitly since the buttons are outside the swiper container
     document.querySelector('.swiper-button-prev-custom').addEventListener('click', () => {
         workSwiper.slidePrev();
     });
