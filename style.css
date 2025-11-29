@@ -4,7 +4,7 @@
 :root {
   /* Colors */
   --swatch--black: #050505;
-  --swatch--dark-zinc: #09090b;
+  --swatch--dark-zinc: #0e0e13;
   --swatch--border: #27272a;
   --swatch--text-primary: #f5f5f5;
   --swatch--text-secondary: #a1a1aa;
@@ -798,3 +798,4 @@ button {
     display: block;
   }
 }
+
