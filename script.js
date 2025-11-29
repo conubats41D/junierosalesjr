@@ -98,15 +98,19 @@ function initNavbarMenu() {
 
     burger.addEventListener('click', () => {
         const isOpen = menu.classList.contains('is-open');
+
+        // Toggle burger animation
+        burger.classList.toggle('is-active');
+
         if (isOpen) {
-            // Collapse
+            // Collapse menu
             menu.style.maxHeight = menu.scrollHeight + "px"; 
             requestAnimationFrame(() => {
                 menu.style.maxHeight = "0px";
             });
             menu.classList.remove('is-open');
         } else {
-            // Expand
+            // Expand menu
             menu.classList.add('is-open');
             menu.style.maxHeight = menu.scrollHeight + "px";
 
@@ -119,9 +123,9 @@ function initNavbarMenu() {
         }
     });
 }
+
 document.addEventListener("DOMContentLoaded", () => {
     initNavbarMenu();
-    if (window.lucide) lucide.createIcons();
 });
 
 /* RENDER MARQUEE (Dynamic HTML Injection) */
