@@ -21,13 +21,21 @@ const PROJECTS = [
         url: "https://www.cruxmarketing.co/",
         tags: ["marketing", "branding", "ui"]
     },
+     {
+        title: "Northwest Framing",
+        category: "Corporate",
+        img: "assets/images/nwf-thumb.webp",
+        description: "A clean, product-focused website showcasing custom framing and display solutions, built with a responsive layout and clear navigation for easy browsing.",
+        url: "https://www.northwestframingsystems.com/",
+        tags: ["framing system", "custom frames"]
+    },
     {
-        title: "Bend Inner Alchemy",
-        category: "Wellness",
-        img: "assets/images/bia-thumb.webp",
-        description: "A calming, wellness-driven platform highlighting holistic services and guided client experiences.",
-        url: "https://www.bendinneralchemy.com/",
-        tags: ["wellness", "holistic", "webdev"]
+        title: "Williamsmith Properties",
+        category: "Real Estate",
+        img: "assets/images/wsp-thumb.webp",
+        description: "A streamlined real-estate website featuring property listings and brokerage information, designed for simple navigation and mobile-friendly viewing.",
+        url: "https://www.williamsmithproperties.com/",
+        tags: ["residential", "commercial"]
     },
     {
         title: "Deschutes River",
