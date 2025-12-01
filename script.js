@@ -232,7 +232,7 @@ const PROJECTS = [
     {
         title: "SEN Events",
         category: "Template",
-        type: "webflow",
+        type: "wordpress",
         img: "assets/images/senevents-thumb.webp",
         description: "A customizable event template showcasing schedules, speakers, and ticket info.",
         url: "https://senevents.1tlc.com.au/",
@@ -241,7 +241,7 @@ const PROJECTS = [
     {
         title: "5-Minute Marketing",
         category: "Template",
-        type: "webflow",
+        type: "wordpress",
         img: "assets/images/5minmarketing-thumb.webp",
         description: "A simple marketing template built for fast content publishing and clean layouts.",
         url: "https://5minutemarketingmakeover.1tlc.com.au/",
@@ -508,3 +508,4 @@ function initScrollAnimations() {
 
     document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
 }
+
