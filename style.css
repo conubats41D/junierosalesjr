@@ -685,7 +685,6 @@ button {
 .filter-btn {
     padding: 0.35rem .9rem;
     border: 1px solid var(--swatch--border);
-    border-radius: 20px;
     background: transparent;
     cursor: pointer;
     font-size: 0.85rem;
@@ -867,4 +866,5 @@ button {
     gap: 1.5rem;
   }
 }
+
 
