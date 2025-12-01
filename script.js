@@ -373,8 +373,8 @@ function renderProjects(filter = "all") {
 /* Swiper Init */
 function initSwiper() {
     workSwiper = new Swiper('#work-slider', {
-        slidesPerView: 3,
         spaceBetween: 24,
+        loop: true,
         navigation: {
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',
@@ -508,4 +508,5 @@ function initScrollAnimations() {
 
     document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
 }
+
 
