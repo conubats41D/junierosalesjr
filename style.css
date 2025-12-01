@@ -626,7 +626,6 @@ button {
 .slider_item {
   flex: 0 0 auto;
   width: 100%;
-  max-width: 22rem; /* 350px */
   scroll-snap-align: center;
   border: 1px solid var(--swatch--border);
   background-color: var(--swatch--black);
@@ -868,3 +867,4 @@ button {
     gap: 1.5rem;
   }
 }
+
