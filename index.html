@@ -115,10 +115,10 @@
             <!-- Marquee Section -->
             <div class="section_marquee reveal-on-scroll">
                 <div class="padding-global">
-                    <div style="padding: 1rem 0;">
+                    <div class="marquee-wrapper fade-overlay">
                         <div class="marquee-track">
-                            <div id="marquee-content-1" style="display: flex;"></div>
-                            <div id="marquee-content-2" style="display: flex;"></div>
+                            <div id="marquee-content-1"></div>
+                            <div id="marquee-content-2"></div>
                         </div>
                     </div>
                 </div>
@@ -336,18 +336,25 @@
                         <div class="padding-section-large">
                             
                             <div class="work_header">
-                                <div>
+                                <div class="work_title">
                                     <h2 class="heading-style-h2">Selected_Works</h2>
                                     <p class="text-style-overline">Swipe_To_Explore >></p>
                                 </div>
-                                <div class="button-group">
-                                    <!-- Swiper Navigation Buttons -->
-                                    <button class="button-icon swiper-button-prev-custom">
-                                        <i data-lucide="chevron-left" width="16"></i>
-                                    </button>
-                                    <button class="button-icon swiper-button-next-custom">
-                                        <i data-lucide="chevron-right" width="16"></i>
-                                    </button>
+                                <div class="work_controls">
+                                    <div class="filter-group">
+                                        <button class="filter-btn active" data-filter="all">All</button>
+                                        <button class="filter-btn" data-filter="webflow">Webflow</button>
+                                        <button class="filter-btn" data-filter="wordpress">WordPress</button>
+                                    </div>
+                                    <div class="button-group">
+                                        <!-- Swiper Navigation Buttons -->
+                                        <button class="button-icon swiper-button-prev-custom">
+                                            <i data-lucide="chevron-left" width="16"></i>
+                                        </button>
+                                        <button class="button-icon swiper-button-next-custom">
+                                            <i data-lucide="chevron-right" width="16"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
