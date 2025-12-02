@@ -131,13 +131,13 @@ const PROJECTS = [
         tags: ["ecommerce", "kids"]
     },
     {
-        title: "David Thomas",
-        category: "Portfolio",
+        title: "Super Quick Carpentry",
+        category: "Trade",
         type: "wordpress",
-        img: "assets/images/davidthomas-thumb.webp",
-        description: "A professional portfolio showcasing work, experience, and publications in a polished layout.",
-        url: "https://davidthomas.asia/",
-        tags: ["portfolio", "personal"]
+        img: "assets/images/superquick-thumb.webp",
+        description: "A trade-focused carpentry website featuring services, project showcases, and clear calls to action.",
+        url: "https://superquickcarpentry.com.au/",
+        tags: ["carpentry", "trade"]
     },
     {
         title: "Candy's Crosby",
@@ -508,5 +508,6 @@ function initScrollAnimations() {
 
     document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
 }
+
 
 
