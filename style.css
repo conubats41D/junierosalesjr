@@ -461,8 +461,6 @@ bg.retro-grid- {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 3rem;
-  border-bottom: 1px solid var(--swatch--border);
-  padding-bottom: 1rem;
 }
 .job_list { 
   display: flex; 
@@ -654,11 +652,11 @@ bg.retro-grid- {
 .slider_item:hover {
   border-color: var(--swatch--text-secondary);
 }
-.slider_item:hover .hover-scale {
-  transform: scale(1.05);
-}
 .slider_item img {
   width: 100%;
+}
+.slider_item:hover .hover-scale {
+  transform: scale(1.05);
 }
 .slider_image-wrapper {
   border-bottom: 1px solid var(--swatch--border);
@@ -888,4 +886,3 @@ bg.retro-grid- {
     gap: 1.5rem;
   }
 }
-
