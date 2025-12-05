@@ -2,17 +2,17 @@
    VARIABLES
    ========================================= */
 :root {
-  /* Colors */
-  --swatch--black: #050505;
-  --swatch--dark-zinc: #0e0e13;
-  --swatch--border: #27272a;
-  --swatch--text-primary: #f5f5f5;
-  --swatch--text-secondary: #a1a1aa;
-  --swatch--white: #ffffff;
+  /* Colors - Light Theme (default) */
+  --swatch--black: #ffffff; /* Main Background */
+  --swatch--dark-zinc: #f4f4f5; /* Light Component Background */
+  --swatch--border: #c5c5c5; /* Light Border */
+  --swatch--text-primary: #18181b; /* Dark Text */
+  --swatch--text-secondary: #6e6e6e; /* Medium Gray Secondary Text */
+  --swatch--white: #050505; /* Primary Accent/Button Background (Black) */
 
   /* Spacing */
   --space--page-padding: 1.5rem;
-  --space--container-max: 80rem; /* 1280px */
+  --space--container-max: 80rem;
   --space--section-large: 6rem;
   --space--section-medium: 4rem;
   --space--section-small: 2rem;
@@ -29,6 +29,15 @@
   --text--size-small: 0.875rem;
   --text--size-tiny: 0.75rem;
   --text--size-sub: 3rem;
+}
+[data-theme="dark"] {
+  /* Colors - Dark Theme (Override) */
+  --swatch--black: #050505; /* Main Background */
+  --swatch--dark-zinc: #0e0e13; /* Dark Component Background */
+  --swatch--border: #27272a; /* Dark Border */
+  --swatch--text-primary: #f5f5f5; /* Light Text */
+  --swatch--text-secondary: #a1a1aa; /* Medium Gray Secondary Text */
+  --swatch--white: #ffffff; /* Primary Accent/Button Background (White) */
 }
 
 /* =========================================
@@ -83,8 +92,8 @@ button {
   left: 10px;
   width: auto;
   height: auto;
-  background: #fff;
-  color: #000;
+  background: var(--swatch--text-primary);
+  color: var(--swatch--black);
   padding: 8px;
 }
 
@@ -164,21 +173,33 @@ button {
    ========================================= */
 
 /* Navbar */
+.brand-link {
+  display:flex; 
+  align-items:center; 
+  gap:0.5rem;
+  font-weight:700;
+}
 .navbar_component {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: rgba(5, 5, 5, 0.9);
+  background-color: color-mix(in srgb, var(--swatch--black) 90%, transparent); 
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--swatch--border);
+  color: var(--swatch--text-primary);
 }
 .navbar_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4rem;
+}
+.navbar_actions {
+  display: flex; 
+  gap: 1rem; 
+  align-items: center;
 }
 .navbar_link-list {
   display: flex;
@@ -191,7 +212,7 @@ button {
   display: block;
 }
 .navbar_link:hover {
-  color: var(--swatch--white);
+  color: var(--swatch--text-primary);
   text-decoration: underline;
 }
 .navbar_burger {
@@ -199,7 +220,7 @@ button {
     background: none;
     border: none;
     cursor: pointer;
-    color: white;
+    color: var(--swatch--text-primary);
 }
 
 /* Header */
@@ -220,18 +241,15 @@ button {
 #static-text {
   display: none;
 }
-/* .header_content h1 span {
-  font-size: var(--text--size-sub);
-} */
 
 /* Retro Grid */
-.retro-grid-bg {
+bg.retro-grid- {
   background-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0.05) 1px,
+      color-mix(in srgb, var(--swatch--text-primary) 5%, transparent) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to bottom, color-mix(in srgb, var(--swatch--text-primary) 5%, transparent) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -257,16 +275,16 @@ button {
   color: var(--swatch--black);
 }
 .is-primary:hover {
-  background-color: #d4d4d8;
+  background-color: color-mix(in srgb, var(--swatch--white) 90%, var(--swatch--text-primary)); /* Slightly dimmer primary color on hover */
 }
 .is-secondary {
   background-color: transparent;
-  border-color: var(--swatch--border);
-  color: var(--swatch--text-secondary);
+  border-color: var(--swatch--text-primary);
+  color: var(--swatch--text-primary);
 }
 .is-secondary:hover {
-  border-color: var(--swatch--white);
-  color: var(--swatch--white);
+  border-color: var(--swatch--border);
+  color: var(--swatch--text-secondary);
 }
 .button-icon {
   padding: 0.75rem;
@@ -277,14 +295,14 @@ button {
   justify-content: center;
 }
 .button-icon:hover {
-  background: var(--swatch--white);
+  background: var(--swatch--text-primary);
   color: var(--swatch--black);
 }
 .button-icon:disabled {
     opacity: 0.6;
     pointer-events: none;
     cursor: not-allowed;
-    background-color: #141414;
+    background-color: var(--swatch--dark-zinc);
 }
 .fade-overlay {
   mask-image: linear-gradient(90deg,
@@ -312,7 +330,7 @@ button {
   position: absolute;
   width: 0.5rem;
   height: 0.5rem;
-  border-color: var(--swatch--white);
+  border-color: var(--swatch--text-primary);
   border-style: solid;
   z-index: 10;
 }
@@ -350,10 +368,11 @@ button {
   bottom: 1rem;
   left: 1rem;
   right: 1rem;
-  background: rgba(0, 0, 0, 0.8);
+  background: color-mix(in srgb, var(--swatch--black) 80%, transparent); 
   border: 1px solid var(--swatch--border);
   padding: 0.5rem;
   backdrop-filter: blur(4px);
+  color: var(--swatch--text-primary);
 }
 .frame_image {
   width: 100%;
@@ -383,7 +402,6 @@ button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--swatch--text-secondary);
   font-size: var(--text--size-small);
   text-transform: uppercase;
   margin-right: 4rem;
@@ -477,7 +495,7 @@ button {
 /* Visual hint on hover */
 .accordion-header:hover,
 .accordion-item.is-open .accordion-header {
-    background-color: var(--swatch--dark-zinc); 
+    background-color: var(--swatch--dark-zinc);
 }
 .job_meta {
     display: flex;
@@ -524,6 +542,7 @@ button {
     content: '::';
     position: absolute;
     left: 0;
+    color: var(--swatch--text-primary);
 }
 
 /* Hobbies/Bento Grid Section */
@@ -550,7 +569,7 @@ button {
 .bento_dot {
   width: 8px;
   height: 8px;
-  background: #52525b;
+  background: var(--swatch--text-secondary);
   border-radius: 50%;
 }
 
@@ -562,7 +581,7 @@ button {
   padding: 0.25rem;
 }
 .bento_image-container {
-  background: #18181b;
+  background: var(--swatch--dark-zinc);
   overflow: hidden;
   position: relative;
 }
@@ -629,7 +648,7 @@ button {
   scroll-snap-align: center;
   border: 1px solid var(--swatch--border);
   background-color: var(--swatch--black);
-  transition: border-color 0.2s;
+  transition: all 0.2s;
   display: block;
 }
 .slider_item:hover {
@@ -655,14 +674,14 @@ button {
   padding: 0.1rem 0.3rem;
 }
 .slider_tag.type {
-   background: var(--swatch--white);
+   background: var(--swatch--text-primary);
     color: var(--swatch--black);
 }
 .slider_title {
   font-weight: 700;
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
-  color: var(--swatch--white);
+  color: var(--swatch--text-primary);
 }
 .slider_description {
   display: -webkit-box;
@@ -692,7 +711,7 @@ button {
 }
 .filter-btn.active,
 .filter-btn:hover {
-    background: var(--swatch--white);
+    background: var(--swatch--text-primary);
     color: var(--swatch--black);
 }
 
@@ -793,7 +812,7 @@ button {
     display: block;
     height: 1.5px;
     width: 100%;
-    background: #fff;
+    background: var(--swatch--text-primary);
     border-radius: 2px;
     transition: all 0.4s ease;
   }
@@ -866,5 +885,3 @@ button {
     gap: 1.5rem;
   }
 }
-
-
