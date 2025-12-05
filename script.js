@@ -380,7 +380,7 @@ function initSwiper() {
             prevEl: '.swiper-button-prev-custom',
         },
         breakpoints: {
-            320: { 
+            480: { 
                 slidesPerView: 1.2,
                 spaceBetween: 16
             },
@@ -468,14 +468,12 @@ function initAccordion() {
             const item = header.closest('.accordion-item');
             const isCurrentlyOpen = item.classList.contains('is-open');
 
-            // 1. Close all other open items
             document.querySelectorAll('.accordion-item.is-open').forEach(openItem => {
                 if (openItem !== item) {
                     openItem.classList.remove('is-open');
                 }
             });
 
-            // 2. Toggle THIS item (open or close)
             item.classList.toggle('is-open');
         });
 
@@ -509,5 +507,44 @@ function initScrollAnimations() {
     document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
 }
 
+/* THEME SWITCHER LOGIC */
+function initThemeSwitcher() {
+    const themeSwitchButton = document.getElementById('theme-switch');
+    
+    if (!themeSwitchButton) {
+        console.error("Theme switch button (#theme-switch) not found.");
+        return;
+    }
 
+    const body = document.body;
+    function updateThemeIcon(theme) {
+        const icon = themeSwitchButton.querySelector('.theme-icon');
+        if (!icon) return;
 
+        const iconName = theme === 'dark' ? 'sun' : 'moon'; 
+        
+        icon.innerHTML = ''; 
+        icon.setAttribute('data-lucide', iconName);
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    }
+    
+    function applyTheme(theme) {
+        body.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        updateThemeIcon(theme);
+    }
+
+    const storedTheme = localStorage.getItem('theme');
+    const initialTheme = storedTheme || 'dark';
+    applyTheme(initialTheme);
+
+    themeSwitchButton.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", initThemeSwitcher);
