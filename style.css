@@ -657,6 +657,9 @@ bg.retro-grid- {
 .slider_item:hover .hover-scale {
   transform: scale(1.05);
 }
+.slider_item img {
+  width: 100%;
+}
 .slider_image-wrapper {
   border-bottom: 1px solid var(--swatch--border);
   overflow: hidden;
@@ -885,3 +888,4 @@ bg.retro-grid- {
     gap: 1.5rem;
   }
 }
+
