@@ -32,7 +32,7 @@
             <div class="padding-global">
                 <div class="container-large">
                     <div class="navbar_container">
-                        <a href="#" class="brand-link" style="display:flex; align-items:center; gap:0.5rem; color:white; font-weight:700;">
+                        <a href="#" class="brand-link">
                             <i data-lucide="terminal" width="16"></i>
                             JR_PORTFOLIO
                         </a>
@@ -45,11 +45,16 @@
                                 <li><a href="#contact" class="navbar_link">Contact</a></li>
                             </ul>
                         </nav>
-                       <button class="navbar_burger" aria-label="Toggle menu" aria-expanded="false">
-                            <span class="burger-line line1"></span>
-                            <span class="burger-line line2"></span>
-                            <span class="burger-line line3"></span>
-                        </button>
+                       <div class="navbar_actions">
+                            <button id="theme-switch" class="button-icon" aria-label="Toggle dark/light theme">
+                                <i data-lucide="sun" class="theme-icon"></i>
+                            </button>
+                            <button class="navbar_burger" aria-label="Toggle navigation menu" id="burger-menu">
+                                <span class="burger-line line1"></span>
+                                <span class="burger-line line2"></span>
+                                <span class="burger-line line3"></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -370,31 +375,31 @@
                 </div>
             </section>
 
-            <!-- Footer -->
-            <footer id="contact" class="section_footer reveal-on-scroll" style="background: var(--swatch--black); border-top: 1px solid var(--swatch--border);">
-                <div class="padding-global">
-                    <div class="container-large">
-                        <div class="padding-section-large footer_content">
-                            
-                            <h2 class="heading-style-h2" style="margin-bottom: 2rem;">Initialize_Collaboration?</h2>
-                            <p class="text-style-overline" style="margin-bottom: 3rem;">[Status: Open_To_Work]</p>
+        </main>
 
-                            <a href="mailto:junie.rosales6045@gmail.com" class="button is-primary" style="margin-bottom: 4rem;">
-                                Send_Email_Transmission
-                            </a>
+        <!-- Footer -->
+        <footer id="contact" class="section_footer reveal-on-scroll" style="background: var(--swatch--black); border-top: 1px solid var(--swatch--border);">
+            <div class="padding-global">
+                <div class="container-large">
+                    <div class="padding-section-large footer_content">
+                        
+                        <h2 class="heading-style-h2" style="margin-bottom: 2rem;">Initialize_Collaboration?</h2>
+                        <p class="text-style-overline" style="margin-bottom: 3rem;">[Status: Open_To_Work]</p>
 
-                            <div class="footer_links">
-                                <a href="https://github.com/conubats41D" target="_blank" class="text-style-overline">Github</a>
-                                <a href="https://www.linkedin.com/in/junie-rosales-jr/" target="_blank" class="text-style-overline">LinkedIn</a>
-                                <span class="text-style-overline">© <span id="current-year"></span> Junie Rosales Jr.</span>
-                            </div>
+                        <a href="mailto:junie.rosales6045@gmail.com" class="button is-primary" style="margin-bottom: 4rem;">
+                            Send_Email_Transmission
+                        </a>
 
+                        <div class="footer_links">
+                            <a href="https://github.com/conubats41D" target="_blank" class="text-style-overline">Github</a>
+                            <a href="https://www.linkedin.com/in/junie-rosales-jr/" target="_blank" class="text-style-overline">LinkedIn</a>
+                            <span class="text-style-overline">© <span id="current-year"></span> Junie Rosales Jr.</span>
                         </div>
+
                     </div>
                 </div>
-            </footer>
-
-        </main>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
