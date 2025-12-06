@@ -801,13 +801,14 @@ bg.retro-grid- {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 28px;
-    height: 22px;
+    width: 30px;
+    height: 12px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     z-index: 1000;
+    position: relative;
   }
   .burger-line {
     display: block;
@@ -818,13 +819,14 @@ bg.retro-grid- {
     transition: all 0.4s ease;
   }
   .navbar_burger.is-active .line1 {
-    transform: rotate(45deg) translateY(14px);
+      transform: rotate(135deg);
+      top: 5px;
+      position: absolute;
   }
   .navbar_burger.is-active .line2 {
-    opacity: 0;
-  }
-  .navbar_burger.is-active .line3 {
-    transform: rotate(-45deg) translateY(-14px);
+      transform: rotate(-135deg);
+      top: 5px;
+      position: absolute;
   }
   .navbar_link-list {
       display: flex;
@@ -842,6 +844,7 @@ bg.retro-grid- {
       margin-right: auto;
       margin-left: auto;
       padding: 0;
+      border: none;
   }
   .button-group {
       justify-content: center;
